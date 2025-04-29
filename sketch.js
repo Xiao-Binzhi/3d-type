@@ -29,13 +29,13 @@ function setup() {
 //
 
 function draw() {
-  background("blue");
+  background("white");
   orbitControl();
 
   let angle = 360 / columns;
   let diameter = textSize();
 
-  fill("white");
+  fill("black");
 
   rotateY(-frameCount);
   for (let i = 0; i < columns; i++) {
