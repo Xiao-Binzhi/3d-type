@@ -1,5 +1,6 @@
 let columns = 10;
 let rows = 10;
+let testo = "I AM MUSIC";
 
 //
 
@@ -11,12 +12,18 @@ function preload() {
 
 //
 
+let cam;
+
 function setup() {
   createCanvas(windowWidth, windowHeight, "webgl");
   angleMode(DEGREES);
 
   textFont(font);
-  textSize(height / 10);
+  textSize(height / rows);
+
+  cam = createCamera();
+  cam.setPosition(0, -1200, 800);
+  cam.lookAt(0, 1200, -1000);
 }
 
 //
@@ -40,7 +47,7 @@ function draw() {
       const m = map(a, -1, 1, 0, textSize());
       push();
       translate(m, textSize() * (j - rows / 2), 0);
-      text("Ciao", 0, 0);
+      text(testo, 0, 0);
       pop();
     }
     pop();
@@ -49,4 +56,5 @@ function draw() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  textSize(height / rows);
 }
