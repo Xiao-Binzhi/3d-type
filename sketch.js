@@ -1,5 +1,5 @@
-let columns = 10;
-let rows = 10;
+let columns = 5;
+let rows = 8;
 let testo = "I AM MUSIC";
 
 //
@@ -7,7 +7,7 @@ let testo = "I AM MUSIC";
 let font;
 
 function preload() {
-  font = loadFont("./assets/InputMonoCondensed-Light.ttf");
+  font = loadFont("./assets/IAmMusic-Regular.ttf-_4_.ttf");
 }
 
 //
@@ -22,8 +22,8 @@ function setup() {
   textSize(height / rows);
 
   cam = createCamera();
-  cam.setPosition(0, -1200, 800);
-  cam.lookAt(0, 1200, -1000);
+  cam.setPosition(0, -8000, 9000);
+  cam.lookAt(0, 1000, 200);
 }
 
 //
